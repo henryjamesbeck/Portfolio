@@ -119,7 +119,7 @@ nav ul li a {
     width: 100%;
     height: 60vw;
     max-height: 800px;
-    background-image: url(/images/About\ Me/title-image.jpg);
+    background-image: url(./images/About\ Me/title-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #333333;
