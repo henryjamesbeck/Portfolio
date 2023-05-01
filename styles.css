@@ -38,12 +38,19 @@ nav {
 nav .logo {
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 nav .logo img {
-    width: 10%;
+    width: 50px;
     padding: 8px;
     border-radius: 40%;
+    transition: all 0.3s linear;
+}
+
+nav .logo img:hover {
+    padding: 8px;
+    border-radius: 50%;
 }
 
 nav .logo .title {
@@ -54,19 +61,23 @@ nav .logo .title {
 }
 
 nav ul {
+    width: 60%;
+    height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    text-align: center;
     padding: 0;
     margin: 0;
     list-style:none;
 }
 
 nav ul li {
+    width: 20%;
     font-size: 15px;
     color: white;
-    padding: 25px 35px;
+    padding: 30px 10px;
     background-color: #333333;
     transition: all 0.3s ease;
 }
@@ -136,7 +147,7 @@ nav ul li a {
 /* -------------------------------------- WELCOME SECTION -------------------------------------- */
 
 
-/* -------------------------------------- OVERVIEW SECTION (P-HOME)/EXPERIENCE SECTION(P-EXPERIENCE) -------------------------------------- */
+/* -------------------------------------- OVERVIEW SECTION (P-HOME)/PROFESSIONAL HISTORY SECTION(P-EXPERIENCE) -------------------------------------- */
 
 .experience-text {
     background-color: #f1f1f1;
@@ -153,8 +164,79 @@ nav ul li a {
     padding: 1% 2%;
 }
 
+/* -------------- Profesional History -------------- */
 
-/* -------------------------------------- TEXT SECTION -------------------------------------- */
+.overview-container {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    position: relative;
+}
+
+.employment-container {
+    flex: 1;
+    margin: 5px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #f3f3f3;
+}
+
+.heading-title {
+    font-size: 20px;
+    padding: 12px;
+    margin: 6px;
+    border-top: 5px solid #ddd;
+    border-bottom: 5px solid #ddd;
+    text-align: center;
+    border-radius: 50px;
+}
+
+h4.heading-title-small {
+    font-size: 16px;
+    padding: 6px;
+    margin: 6px;
+    border-top: 3px solid #ddd;
+    border-bottom: 3px solid #ddd;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.employment-container:hover {
+    border: 2px solid black;
+    transform: scale(1.01);
+    background-color: #e7e7e7;
+    
+}
+
+div.employment-container>* {
+    padding: 5px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+div.employment-container>*:hover {
+    background-color: #f5f5f5;
+}
+
+.experience-history {
+    text-align: center;
+}
+
+.description {
+
+}
+
+.key-achievements {
+
+}
+
+.experience-table td {
+    padding: 5px 15px;
+}
+
+
+/* -------------------------------------- LANGUAGES SECTION -------------------------------------- */
 
 .maintext {
     font-size: 18px;
@@ -165,6 +247,8 @@ nav ul li a {
 .subtext {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     height: 100%;
     width: 100%;
 }
@@ -188,27 +272,47 @@ nav ul li a {
 }
 
 .subtext-html {
+    width: 30%;
     background-color: #e34c26;
 }
 
 .subtext-css {
+    width: 30%;
     background-color: #264de4;
 }
 
 .subtext-js {
+    width: 30%;
     background-color: #F0DB4F;
 }
 
 .subtext-py {
+    width: 30%;
     background-color: #9df04f;
 }
 
-.subtext-html p, .subtext-css p, .subtext-js p, .subtext-py p, .subtext-bootstrap p, .subtext-react p {
+.subtext-bootstrap {
+    width: 30%;
+    background-color: #563d7c;
+}
+
+.subtext-react {
+    width: 30%;
+    background-color: #61dbfb;
+}
+
+.subtext-jquery {
+    width: 30%;
+    background-color: #FAA523;
+}
+
+.subtext-html p, .subtext-css p, .subtext-js p, .subtext-py p, .subtext-bootstrap p, .subtext-react p, .subjtext-jquery {
     padding-bottom: 100px;
 }
 
 .logo-img {
-    width: 20%;
+    max-width: 40%;
+    width: 100%;
     border-radius: 0px;
 }
 
@@ -239,13 +343,7 @@ nav ul li a {
 }
 
 
-.subtext-bootstrap {
-    background-color: #563d7c;
-}
 
-.subtext-react {
-    background-color: #61dbfb;
-}
 
 .subtext-placeholder1 {
 
@@ -626,6 +724,23 @@ input[type=submit]:hover {
         align-items: 100vw;
     }
 
+    nav ul {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 0 0 0;
+        margin: 0;
+        list-style:none;
+    }
+    
+    nav ul li {
+        width: 20%;
+        font-size: 15px;
+        color: white;
+        padding: 20px 10px;
+        background-color: #333333;
+        transition: all 0.3s ease;
+    }
+
     nav .logo .title {
         color: white;
         font-size: 24px;
@@ -641,6 +756,26 @@ input[type=submit]:hover {
     .subtext-html, .subtext-css, .subtext-js, .subtext-py, .subtext-bootstrap, .subtext-react {
         width: 80%;
     }
+
+    .logo-img {
+        width: 20%;
+        border-radius: 0px;
+    }
+
+    /* EXPERIENCE PAGE SETUP */
+    .overview-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .experience-history, .key-achievements, .description {
+        height: auto;
+    }
+
+    .experience-history, .key-achievements, .description:hover {
+        
+    }
+
 
     /* PROJECT PAGE SETUP */
     .projects .project img {
